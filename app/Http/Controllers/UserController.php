@@ -21,4 +21,8 @@ class UserController extends Controller
     public function reset(){
         return view('auth.reset');
     }
+
+    public function saveUser(Request $request){
+        //validate all the fields
+    }
 }

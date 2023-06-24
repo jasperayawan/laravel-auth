@@ -53,5 +53,25 @@
 @endsection
 
 @section('script')
+<script>
+    $(function(){
+        $("#register_form").submit(function(e){
+            e.preventDefault();
 
+            $("#register_btn").val("Please wait...");
+
+            $.ajax({
+                url: '{{ route('auth.register') }}',
+                method: 'post',
+                //send all the form data
+                //sserialize method to send the data
+                data: $(this).serialize(),
+                // dataType: 'json',
+                success: function(res){
+                    console.log(res)
+                }
+            })
+        })
+    })
+</script>
 @endsection
