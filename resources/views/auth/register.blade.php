@@ -4,7 +4,7 @@
 @section('content')
     <div class="container-fluid">
         <div class="row d-flex justify-content-center align-items-center min-vh-100">
-            <div class="col-md-4">
+            <div class="col-md-8 col-lg-4">
                 <div class="card">
                     <div class="card-header">
                         <h2 class="fw-bold text-secondary text-center">Register</h2>
