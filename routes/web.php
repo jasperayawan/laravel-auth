@@ -20,6 +20,7 @@ Route::get('/forgot', [UserController::class, 'forgot']);
 Route::get('/reset', [UserController::class, 'reset']);
 Route::get('/login', [UserController::class, 'logUser'])->name('login');
 Route::get('/profile', [UserController::class, 'profile'])->name('profile');
+Route::get('/logout', [UserController::class, 'logout'])->name('auth.logout');
 
 Route::post('/register', [UserController::class, 'saveUser'])->name('auth.register');
 Route::post('/login', [UserController::class, 'loginUser'])->name('auth.login');

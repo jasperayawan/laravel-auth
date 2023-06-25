@@ -99,4 +99,11 @@ class UserController extends Controller
     public function profile(){
         return view('profile');
     }
+
+    public function logout(){
+        if(session()->has('loggedInUser')){
+            session()->pull('loggedInUser');
+            return redirect('/');
+        }
+    }
 }
