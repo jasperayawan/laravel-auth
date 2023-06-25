@@ -80,7 +80,7 @@
                         $("#register_form")[0].reset();
                         removeValidationClasses("#register_form")
                         $("#register_btn").val("Register"); 
-                        window.location = '{{ route('/login') }}'
+                        window.location = '{{ route('login') }}'
                     }
                 }
             })
