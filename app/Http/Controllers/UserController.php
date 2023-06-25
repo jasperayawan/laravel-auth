@@ -6,6 +6,7 @@ use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Validator as FacadesValidator;
+use Illuminate\Support\Facades\DB;
 
 class UserController extends Controller
 {
@@ -101,7 +102,10 @@ class UserController extends Controller
     }
 
     public function profile(){
-        return view('profile');
+        //get all user data from database with single data who's currently loggined
+        $data = ['userInfo' => DB::table('users')->where('id', session('loggedInUser'))
+        ->first()];
+        return view('profile', $data);
     }
 
     public function logout(){
