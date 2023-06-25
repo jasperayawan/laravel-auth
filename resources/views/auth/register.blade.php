@@ -65,7 +65,7 @@
                 url: '{{ route('auth.register') }}',
                 method: 'post',
                 //send all the form data
-                //sserialize method to send the data
+                //serialize method to send the data
                 data: $(this).serialize(),
                 // dataType: 'json',
                 success: function(res){
@@ -80,6 +80,7 @@
                         $("#register_form")[0].reset();
                         removeValidationClasses("#register_form")
                         $("#register_btn").val("Register"); 
+                        window.location = '{{ route('/login') }}'
                     }
                 }
             })
